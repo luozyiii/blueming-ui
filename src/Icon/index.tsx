@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import * as Fa from 'react-icons/fa';
 
 /**
@@ -17,9 +17,6 @@ interface Props {
 
 export default (props: Props) => {
   const { type, size, rotation, style } = props;
-  // const IconComponent = Fa[type]
-  const IconComponent: any = Object.values(Fa).map(
-    (value, key, arr) => String(key) === type,
-  );
+  const IconComponent = Fa[type];
   return <IconComponent size={size} rotation={rotation} style={style} />;
 };

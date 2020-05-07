@@ -40,11 +40,10 @@ yarn create @umijs/dumi-lib
 ```
 # 错误写法
 const IconComponent = Fa[type]
-return <IconComponent size={size} rotation={rotation} style={style} />
+
+# yarn build 报错
 # 报错 Type 'String' cannot be used as an index type.ts(2538)    string不能作为对象的index值
-# JSX element type 'IconComponent' does not have any construct or call signatures  IconComponent需增加type类型any
 
 # 正确写法
-const IconComponent:any = Object.values(Fa).map((value,key,arr)=> String(key) === type)
-return <IconComponent size={size} rotation={rotation} style={style} />
+
 ```
