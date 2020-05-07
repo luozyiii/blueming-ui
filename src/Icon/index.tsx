@@ -17,6 +17,7 @@ interface Props {
 
 export default (props: Props) => {
   const { type, size, rotation, style } = props;
+  // @ts-ignore
   const IconComponent = Fa[type];
   return <IconComponent size={size} rotation={rotation} style={style} />;
 };

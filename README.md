@@ -44,6 +44,14 @@ const IconComponent = Fa[type]
 # yarn build 报错
 # 报错 Type 'String' cannot be used as an index type.ts(2538)    string不能作为对象的index值
 
-# 正确写法
+# 解决方法
+# Typescript错误忽略
+# 单行忽略
+// @ts-ignore
 
+# 忽略全文
+// @ts-nocheck
+
+# 取消忽略全文
+// @ts-check
 ```
