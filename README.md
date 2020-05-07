@@ -32,3 +32,19 @@ yarn create @umijs/dumi-lib
 反馈型组件: 比如 Progress 进度条, Drawer 抽屉, Modal 对话框等.
 
 其他业务类型
+
+#### ts 问题汇总
+
+1.Icon
+
+```
+# 错误写法
+const IconComponent = Fa[type]
+return <IconComponent size={size} rotation={rotation} style={style} />
+# 报错 Type 'String' cannot be used as an index type.ts(2538)    string不能作为对象的index值
+# JSX element type 'IconComponent' does not have any construct or call signatures  IconComponent需增加type类型any
+
+# 正确写法
+const IconComponent:any = Object.values(Fa).map((value,key,arr)=> String(key) === type)
+return <IconComponent size={size} rotation={rotation} style={style} />
+```
