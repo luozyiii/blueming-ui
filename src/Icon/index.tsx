@@ -10,9 +10,9 @@ import * as Fa from 'react-icons/fa';
  */
 interface Props {
   type: String;
-  size: String;
-  rotation: Number;
-  style: Object;
+  size?: String;
+  rotation?: Number;
+  style?: Object;
 }
 
 export default (props: Props) => {

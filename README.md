@@ -55,3 +55,10 @@ const IconComponent = Fa[type]
 # 取消忽略全文
 // @ts-check
 ```
+
+2. Element implicitly has an 'any' type because expression of type 'any' can't be used to
+
+```
+# tsconfig 增加配置
+"suppressImplicitAnyIndexErrors": true
+```
