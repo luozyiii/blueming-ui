@@ -10,11 +10,11 @@ import './index.less';
  */
 interface Props {
   children: React.ReactNode;
-  onClick: any;
-  className: String;
-  type: String;
-  shape: String;
-  block: Boolean;
+  onClick?: any;
+  className?: String;
+  type?: String;
+  shape?: String;
+  block?: Boolean;
 }
 export default (props: Props) => {
   const { children, onClick, className, type, shape, block } = props;
